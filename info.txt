@@ -1,0 +1,399 @@
+
+*** Muc tieu 1 thang project se co:
+Task Management System
+
+✔ Login/Register
+✔ JWT Authentication
+✔ CRUD User
+✔ CRUD Project
+✔ CRUD Task
+✔ Comment
+✔ Upload Avatar
+✔ Search
+✔ Filter
+✔ Pagination
+✔ Docker
+✔ Swagger
+✔ Unit Test cơ bản
+
+Deploy
+
+Backend
+↓
+
+Frontend
+↓
+
+MySQL
+
+~~~~~~~~~~~~~~~~~~~```
+
+Backend:
+Java 21
+
+Spring Boot 3
+
+Spring Security
+
+Spring Data JPA
+
+Hibernate
+
+JWT
+
+MySQL
+
+Docker
+
+Swagger(OpenAPI)
+
+Lombok
+
+MapStruct
+
+JUnit
+
+Mockito
+
+Flyway
+
+Maven
+~~~~~~~~~`
+
+Frontend:
+React + Vite
+
+TypeScript
+
+Material UI
+
+Axios
+
+React Query
+
+React Router
+
+Formik
+
+Yup
+
+~~~~~~~~`
+repository:
+task-management-system/
+
+│
+├── backend/
+│
+├── frontend/
+│
+├── docs/
+│
+├── scripts/
+│
+├── .github/
+│
+├── docker/
+│
+├── docker-compose.yml
+│
+├── README.md
+│
+└── .gitignore
+
+
+~~~~~~~~~~~`
+
+docs:
+docs/
+
+01-requirement/
+
+02-design/
+
+03-api/
+
+04-database/
+
+05-rules/
+
+06-prompts/
+
+07-progress/
+
+08-meeting/
+
+09-note/
+
+~~~~~~~~``
+
+requirement:
+docs/01-requirement/
+
+overview.md
+
+feature-list.md
+
+roadmap.md
+~~~~~~~~~`````
+
+Design 
+architecture.md
+
+sequence-diagram.md
+
+class-diagram.md
+
+package.md
+
+~~~~~~~~~~`
+
+api:
+auth.md
+
+user.md
+
+task.md
+
+project.md
+~~~~~``
+
+Database:
+erd.png
+
+tables.md
+
+migration.md
+
+~~~~~~~~~~~~~
+Rule:
+docs/05-rules/
+
+java-style.md
+
+git-rule.md
+
+commit-rule.md
+
+folder-rule.md
+
+api-rule.md
+
+exception-rule.md
+
+logging-rule.md
+
+security-rule.md
+
+~~~~~~~``
+AI prompts:
+
+docs/06-prompts/
+
+backend-agent.md
+
+frontend-agent.md
+
+review-agent.md
+
+refactor-agent.md
+
+~~~~~~~``
+
+Process:
+Week1
+
+[x]
+
+Week2
+
+[]
+
+Week3
+
+[]
+
+Week4
+
+[]
+
+~~~~~``
+
+Backend structure:
+backend/
+
+src/
+
+ main/
+
+  java/
+
+   config/
+
+   controller/
+
+   service/
+
+   repository/
+
+   entity/
+
+   dto/
+
+   mapper/
+
+   exception/
+
+   security/
+
+   util/
+
+   validation/
+
+   common/
+
+   constant/
+
+~~~~~~~~~`
+
+Frontend structure
+frontend/
+
+src/
+
+ api/
+
+ components/
+
+ layouts/
+
+ pages/
+
+ hooks/
+
+ services/
+
+ store/
+
+ utils/
+
+ types/
+
+ assets/
+
+~~~~~~~~~~`
+
+git branch:
+main
+
+develop
+
+feature/auth
+
+feature/task
+
+feature/project
+
+feature/comment
+
+
+~~~~~~`
+Commit rule:
+feat:
+
+fix:
+
+refactor:
+
+docs:
+
+style:
+
+test:
+
+chore:
+
+~~~~~~~~```
+
+Lộ trình 1 tháng:
+
+Tuần 1 — Xây nền móng
+
+Mục tiêu: Hoàn thiện môi trường phát triển và chức năng xác thực.
+
+Tạo repository và cấu trúc thư mục.
+Khởi tạo Spring Boot và React.
+Cấu hình MySQL, Docker Compose, Flyway.
+Thiết kế ERD phiên bản đầu.
+Tạo Entity: User, Role.
+Đăng ký, đăng nhập.
+JWT Authentication.
+Spring Security.
+Swagger.
+Viết tài liệu API cho Auth.
+
+Cuối tuần 1: Có thể đăng ký và đăng nhập bằng JWT.
+
+~~~~~~~
+
+Tuần 2 — Quản lý Project và Task
+
+Mục tiêu: Hoàn thiện các chức năng CRUD cốt lõi.
+
+CRUD Project.
+CRUD Task.
+Quan hệ User ↔ Project ↔ Task.
+Validation.
+Pagination.
+Sorting.
+Filtering.
+DTO và MapStruct.
+Global Exception Handler.
+
+Cuối tuần 2: Người dùng có thể tạo dự án và quản lý công việc.
+
+~~~~~~~~~~~`
+
+Tuần 3 — Hoàn thiện tính năng
+
+Mục tiêu: Nâng chất lượng ứng dụng.
+
+CRUD Comment.
+Upload Avatar.
+Upload Attachment.
+Logging.
+Unit Test (Service).
+Tối ưu truy vấn JPA.
+Hoàn thiện tài liệu API.
+
+Cuối tuần 3: Hệ thống gần đạt mức có thể demo.
+
+~~~~~~~~~~~`
+
+Tuần 4 — Hoàn thiện và triển khai
+
+Mục tiêu: Đưa project về trạng thái "portfolio-ready".
+
+Docker hóa Backend, Frontend và MySQL.
+Hoàn thiện README.
+Kiểm tra toàn bộ API.
+Sửa lỗi và refactor.
+Chuẩn hóa coding style.
+Viết tài liệu kiến trúc và hướng dẫn chạy dự án.
+
+Cuối tuần 4: Có thể clone repository, chạy bằng docker-compose up và sử dụng ngay.
+
+~~~~~~~~~~~~~~~~`
+
+Điều mình muốn đồng hành cùng bạn
+
+Thay vì chỉ trả lời từng câu hỏi Java rời rạc, mình đề xuất chúng ta phát triển dự án này như một dự án thật.
+
+Mỗi buổi sẽ tương ứng với một Sprint nhỏ:
+
+Phân tích yêu cầu (Business Requirement).
+Thiết kế Database và API.
+Cài đặt từng tính năng theo Clean Architecture.
+Viết Unit Test.
+Review code như một Senior Java Developer.
+Refactor và tối ưu.
+Cập nhật tài liệu trong docs/.
