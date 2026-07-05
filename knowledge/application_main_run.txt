@@ -1,0 +1,37 @@
+Application.main()
+        │
+        ▼
+SpringApplication.run()
+        │
+        ▼
+Khởi tạo SpringApplication
+        │
+        ▼
+Đọc cấu hình và Environment
+        │
+        ▼
+Tạo ApplicationContext (IoC Container)
+        │
+        ▼
+Component Scan
+        │
+        ▼
+Tạo BeanDefinition
+        │
+        ▼
+Auto Configuration
+        │
+        ▼
+Khởi tạo Bean
+        │
+        ▼
+Dependency Injection
+        │
+        ▼
+Khởi động Embedded Tomcat
+        │
+        ▼
+Publish ApplicationReadyEvent
+        │
+        ▼
+Ứng dụng sẵn sàng phục vụ request

@@ -24,7 +24,7 @@ Backend
 Frontend
 ↓
 
-MySQL
+PostgreSQL
 
 ~~~~~~~~~~~~~~~~~~~```
 
@@ -41,7 +41,7 @@ Hibernate
 
 JWT
 
-MySQL
+PostgreSQL
 
 Docker
 
@@ -322,7 +322,7 @@ Mục tiêu: Hoàn thiện môi trường phát triển và chức năng xác th
 
 Tạo repository và cấu trúc thư mục.
 Khởi tạo Spring Boot và React.
-Cấu hình MySQL, Docker Compose, Flyway.
+Cấu hình PostgreSQL, Docker Compose, Flyway.
 Thiết kế ERD phiên bản đầu.
 Tạo Entity: User, Role.
 Đăng ký, đăng nhập.
@@ -373,7 +373,7 @@ Tuần 4 — Hoàn thiện và triển khai
 
 Mục tiêu: Đưa project về trạng thái "portfolio-ready".
 
-Docker hóa Backend, Frontend và MySQL.
+Docker hóa Backend, Frontend và PostgreSQL.
 Hoàn thiện README.
 Kiểm tra toàn bộ API.
 Sửa lỗi và refactor.
