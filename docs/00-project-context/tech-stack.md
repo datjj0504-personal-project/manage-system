@@ -3,13 +3,13 @@
 ## Backend
 
 Language
-- Java 21 (LTS)
+- Java openjdk 21 LTS
 
 Framework
-- Spring Boot 3.x
+- Spring Boot 4.x
 
 Build Tool
-- Maven
+- Maven 3.9+
 
 Persistence
 - Spring Data JPA
@@ -20,7 +20,7 @@ Security
 - JWT
 
 Database
-- MySQL 8
+- PostgreSQL 18
 
 Migration
 - Flyway
@@ -112,5 +112,3 @@ Operating System
 Supported
 
 - Windows
-- Linux
-- macOS

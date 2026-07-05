@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: factory-dashboard-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dashboard_user
+      POSTGRES_PASSWORD: changeme_in_prod
+      POSTGRES_DB: factory_dashboard
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dashboard_user -d factory_dashboard"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - backend-net
+
+volumes:
+  pgdata:
+
+networks:
+  backend-net:
+    driver: bridge
