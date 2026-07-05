@@ -4,7 +4,7 @@ Project
 
 Spring Boot 4
 
-Java 26
+Java 21
 
 Architecture
 

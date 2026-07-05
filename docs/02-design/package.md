@@ -1,4 +1,4 @@
-com.company.taskmanagement
+com.datnt.taskmanagement
 
 config
 

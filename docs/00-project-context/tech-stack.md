@@ -3,13 +3,13 @@
 ## Backend
 
 Language
-- Java openjdk 26.0.1 2026-04-21
+- Java openjdk 21 LTS
 
 Framework
 - Spring Boot 4.x
 
 Build Tool
-- Maven
+- Maven 3.9+
 
 Persistence
 - Spring Data JPA
@@ -20,7 +20,7 @@ Security
 - JWT
 
 Database
-- PostgreSQL
+- PostgreSQL 18
 
 Migration
 - Flyway
