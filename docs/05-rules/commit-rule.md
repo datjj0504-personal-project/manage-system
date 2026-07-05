@@ -17,3 +17,7 @@ ci
 perf
 
 chore
+
+update
+
+add
