@@ -39,6 +39,15 @@ postgres --version
 git --version
 ```
 
+### 5) Docker
+- **Required:** Needed if running Postgres in docker
+- **How to compose docker:** docker compose up -d
+- ** Verify: **
+```bash
+Enter terminal docker
+postgres --version
+```
+
 ---
 
 ## Clone Repository
