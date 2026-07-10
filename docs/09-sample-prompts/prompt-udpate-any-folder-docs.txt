@@ -15,6 +15,9 @@ Requirements:
 - Keep terminology consistent with docs/00-project-context/glossary.md.
 - Do not generate source code unless explicitly requested.
 
+Modification points:
+- <Type-requirement-here>
+
 Output:
 
 1. Summary of changes.
