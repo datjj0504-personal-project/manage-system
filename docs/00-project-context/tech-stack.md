@@ -105,7 +105,7 @@ Diagram
 - Mermaid
 
 IDE
-- IntelliJ IDEA Ultimate / Community
+- Vscode
 
 Operating System
 
