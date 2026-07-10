@@ -39,6 +39,15 @@ postgres --version
 git --version
 ```
 
+### 5) Docker
+- **Required:** Needed if running Postgres in docker
+- **How to compose docker:** docker compose up -d
+- ** Verify: **
+```bash
+Enter terminal docker
+postgres --version
+```
+
 ---
 
 ## Clone Repository
@@ -154,7 +163,7 @@ This command cleans old build artifacts, resolves dependencies, compiles source 
 ### Method 1: IntelliJ IDEA
 1. Open `backend` as a Maven project.
 2. Wait for Maven import to finish.
-3. Run `com.datnt.taskmanagement.Application`.
+3. Run `dev.datnt.taskmanagement.Application`.
 
 ### Method 2: Maven Wrapper
 ```bash
