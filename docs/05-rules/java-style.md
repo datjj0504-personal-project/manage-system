@@ -1,57 +1,36 @@
-Java Version
+# Java Style Rules
 
-Java 21
+## Language Baseline
 
-Naming
+- Java version: 21
 
-Class
+## Naming
 
-PascalCase
+- Class: PascalCase
+- Method: camelCase
+- Variable: camelCase
+- Constant: UPPER_SNAKE_CASE
+- Package: lowercase
 
-Method
+## Code Size Guidance
 
-camelCase
+- Preferred max class length: 300 lines
+- Preferred max method length: 30 lines
 
-Variable
+## Layer Discipline
 
-camelCase
+- Controller: no business logic
+- Service: business logic orchestration
+- Repository: database access only
 
-Constant
+## Dependency Injection
 
-UPPER_SNAKE_CASE
+- Use constructor injection only
+- Do not use field injection
 
-Package
+## DTO and Nullability
 
-lowercase
-
-Maximum class length
-
-300 lines
-
-Maximum method
-
-30 lines (preferred)
-
-Controller
-
-No business logic
-
-Service
-
-Contains business logic
-
-Repository
-
-Database only
-
-Never use field injection
-
-Use constructor injection only.
-
-Use record for DTO whenever possible.
-
-Use Optional carefully.
-
-Avoid null.
-
-Use final whenever possible.
+- Use record for DTO where practical
+- Use Optional carefully; do not overuse in entities
+- Avoid null return when clearer alternatives exist
+- Use `final` where possible for immutability and clarity

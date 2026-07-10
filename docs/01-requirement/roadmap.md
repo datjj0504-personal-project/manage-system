@@ -1,23 +1,35 @@
-Sprint 1
+# Roadmap
+
+## Sprint 1 (Foundation)
 
 - Project initialization
-- Authentication
-- JWT
-- User Management
+- Environment and profile configuration
+- Basic health endpoint
+- Security baseline
 
-Sprint 2
+## Sprint 2 (Core Identity)
 
-- Project CRUD
-- Task CRUD
+- Authentication module (register, login, refresh token)
+- JWT security flow
+- User profile and password management
+- Auth and user tests
 
-Sprint 3
+## Sprint 3 (Core Work Management)
 
-- Comment
-- Upload
+- Project CRUD with Owner and Member rules
+- Task CRUD with Status, Priority, and Assignee flow
+- Search, Pagination, Sorting, Filtering for lists
+- API and database documentation synchronization
+
+## Sprint 4 (Collaboration and Hardening)
+
+- Comment module
+- Attachment module
+- Docker validation and runtime guide hardening
+- Test coverage expansion and refactor
+
+## Post Sprint 4
+
 - Notification
-
-Sprint 4
-
-- Docker
-- Testing
-- Refactor
+- Admin features
+- CI/CD pipeline

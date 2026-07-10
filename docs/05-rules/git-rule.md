@@ -1,13 +1,17 @@
-Branch
+# Git Rules
 
-main
+## Branch Model
 
-develop
+- main: production-ready history
+- develop: integration branch for completed features
+- feature/*: feature development
+- bugfix/*: bug fixes on develop scope
+- release/*: release preparation
+- hotfix/*: urgent production fix from main
 
-feature/*
+## Pull Request Rules
 
-bugfix/*
-
-release/*
-
-hotfix/*
+- Rebase or merge from develop before opening PR.
+- Keep PR scope focused and reviewable.
+- Include testing notes and impact summary.
+- Do not merge if required checks fail.

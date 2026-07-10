@@ -1,15 +1,24 @@
-JUnit 5
+# Testing Rules
 
-Mockito
+## Test Stack
 
-Service Layer
+- JUnit 5
+- Mockito
+- MockMvc
+- @DataJpaTest
 
-80% coverage target
+## Layer Strategy
 
-Controller
+- Service layer: unit tests for business logic.
+- Controller layer: API contract tests with MockMvc.
+- Repository layer: data access tests with @DataJpaTest.
 
-MockMvc
+## Coverage Goal
 
-Repository
+- Target minimum 80% coverage on critical business services.
 
-@DataJpaTest
+## Quality Rules
+
+- Tests must be deterministic and independent.
+- Use meaningful test names with scenario + expected result.
+- Cover positive and negative cases, especially Validation and authorization failures.

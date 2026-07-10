@@ -6,9 +6,11 @@ Read
 
 docs/00-project-context
 
-docs/01-architecture
+docs/01-requirement
 
-docs/90-ai
+docs/02-design
+
+docs/08-ai
 
 Follow all coding rules.
 

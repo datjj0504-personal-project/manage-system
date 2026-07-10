@@ -1,0 +1,13 @@
+Sprint 4 Report
+
+Status: Not started
+
+Planned scope:
+- Comment
+- Attachment upload
+- Docker hardening
+- Testing expansion
+- Refactor
+
+Current note:
+- Focus depends on completion of Sprint 2 and Sprint 3 deliverables.

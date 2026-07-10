@@ -1,15 +1,24 @@
-BCrypt Password Encoder
+# Security Rules
 
-JWT
+## Authentication and Authorization
 
-HTTPS only (Production)
+- Use BCrypt password encoder for password hashing.
+- Use JWT for stateless authentication.
+- Enforce role-based authorization.
 
-Role Based Authorization
+## Transport Security
 
-Validate every request
+- Production must use HTTPS only.
 
-Never expose Entity
+## Input and Output Safety
 
-Never trust frontend validation
+- Validate every request payload.
+- Never trust frontend validation alone.
+- Sanitize inputs where required.
+- Never expose Entity directly in API responses.
 
-Sanitize inputs
+## Sensitive Data Handling
+
+- Do not store plaintext passwords.
+- Do not log credentials or tokens.
+- Restrict error messages to safe details for clients.

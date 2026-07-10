@@ -1,31 +1,21 @@
-controller
+# Folder Rules
 
-Receive Request only.
+## Layer Responsibilities
 
-service
+- controller: Receive request, trigger Validation, return response only.
+- service: Business logic and use-case orchestration.
+- repository: Database access and query logic only.
+- mapper: Entity <-> DTO transformation.
+- dto: Request and response payload classes only.
+- entity: Persistence models only.
+- config: Spring and framework configuration.
+- exception: Exceptions and global exception handling.
+- security: Authentication and authorization components.
+- common: Shared objects and utilities used across modules.
 
-Business Logic only.
+## Boundary Rules
 
-repository
-
-Database Access only.
-
-mapper
-
-Entity <-> DTO
-
-dto
-
-Request/Response only.
-
-entity
-
-Database Model only.
-
-config
-
-Spring Configuration.
-
-common
-
-Shared utilities.
+- Controller must not access Repository directly.
+- Repository must not contain business rules.
+- Entity must not be returned directly by API.
+- Service should be the main place for transaction boundaries.

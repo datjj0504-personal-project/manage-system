@@ -1,0 +1,11 @@
+Sprint 3 Report
+
+Status: Not started
+
+Planned scope:
+- Project CRUD
+- Task CRUD
+- Search, Pagination, Sorting, Filtering
+
+Current note:
+- Start after Sprint 2 auth and user delivery is stable.

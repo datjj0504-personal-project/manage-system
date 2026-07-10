@@ -1,23 +1,24 @@
-Framework
+# Logging Rules
 
-SLF4J
+## Framework
 
-Log Level
+- Use SLF4J API with Logback backend.
 
-ERROR
+## Log Levels
 
-WARN
+- ERROR: failed operation requiring attention.
+- WARN: unexpected but recoverable behavior.
+- INFO: important business or lifecycle events.
+- DEBUG: detailed troubleshooting logs (non-production by default).
 
-INFO
+## Security and Privacy
 
-DEBUG
+- Never use `System.out.println()`.
+- Never log password.
+- Never log JWT or access token.
+- Never log sensitive personal data unless masked.
 
-Never use System.out.println()
+## Exception Logging
 
-Never log password
-
-Never log JWT
-
-Never log access token
-
-Always log exception stacktrace.
+- Always log exception stacktrace at handling boundary.
+- Include correlation context when available (request id, user id).

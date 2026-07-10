@@ -1,13 +1,35 @@
-Context
+# Prompt Task Template
 
-Objective
+Use this structure when assigning tasks to AI agents or contributors.
 
-Scope
+## Context
 
-Technical Requirements
+Brief system and module background relevant to the task.
 
-Out of Scope
+## Objective
 
-Acceptance Criteria
+One clear expected outcome.
 
-Review Checklist
+## Scope
+
+What must be changed.
+
+## Technical Requirements
+
+Architecture, framework, coding, and security constraints.
+
+## Out of Scope
+
+What must not be changed.
+
+## Acceptance Criteria
+
+Observable and testable completion conditions.
+
+## Review Checklist
+
+- Architecture respected
+- Validation covered
+- Security considered
+- Tests updated
+- Documentation updated

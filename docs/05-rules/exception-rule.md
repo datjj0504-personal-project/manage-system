@@ -1,13 +1,25 @@
-Use GlobalExceptionHandler.
+# Exception Rules
 
-Never catch Exception.
+## Core Rules
 
-Always create Custom Exception.
+- Use GlobalExceptionHandler for centralized exception mapping.
+- Do not expose internal stacktrace details in API responses.
+- Never swallow exceptions silently.
+- Catch broad `Exception` only at global boundary, not in business logic.
 
-Validation Exception
+## Exception Types
 
-Business Exception
+- ValidationException: invalid request input.
+- BusinessException: domain rule violation.
+- ResourceNotFoundException: requested resource does not exist.
+- AuthenticationException: invalid or missing credentials.
+- AuthorizationException: authenticated but no permission.
 
-Resource Not Found Exception
+## Mapping Guidance
 
-Authentication Exception
+- ValidationException -> 400
+- AuthenticationException -> 401
+- AuthorizationException -> 403
+- ResourceNotFoundException -> 404
+- BusinessException -> 409
+- Unexpected exception -> 500

@@ -1,9 +1,16 @@
-Report for sprint 1:
+Sprint 1 Report
 
-- Finish: Server initialization
+Completed:
+- Server initialization
+- Base project structure and package scaffolding
+- Health endpoint
+- Basic security configuration
 
-- Not yet: 
-    - Authentication
-    - JWT
-    - User Management
---> Need to implement in sprint 2
+Not completed:
+- Authentication
+- JWT
+- User Management
+
+Carry over to Sprint 2:
+- Implement auth and user modules
+- Add migration baseline and tests
