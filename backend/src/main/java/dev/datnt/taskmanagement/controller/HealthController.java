@@ -1,6 +1,6 @@
-package com.datnt.taskmanagement.controller;
+package dev.datnt.taskmanagement.controller;
 
-import com.datnt.taskmanagement.common.ApiResponse;
+import dev.datnt.taskmanagement.common.ApiResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

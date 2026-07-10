@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.datnt</groupId>
+    <groupId>dev.datnt</groupId>
     <artifactId>taskmanagement</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>taskmanagement</name>

@@ -1,6 +1,6 @@
-package com.datnt.taskmanagement.exception;
+package dev.datnt.taskmanagement.exception;
 
-import com.datnt.taskmanagement.common.ApiResponse;
+import dev.datnt.taskmanagement.common.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

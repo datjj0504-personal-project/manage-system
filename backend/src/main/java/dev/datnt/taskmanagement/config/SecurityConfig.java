@@ -1,4 +1,4 @@
-package com.datnt.taskmanagement.config;
+package dev.datnt.taskmanagement.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

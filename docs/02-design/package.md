@@ -1,4 +1,4 @@
-com.datnt.taskmanagement
+dev.datnt.taskmanagement
 
 config
 

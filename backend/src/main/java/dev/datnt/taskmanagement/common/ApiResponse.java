@@ -1,4 +1,4 @@
-package com.datnt.taskmanagement.common;
+package dev.datnt.taskmanagement.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
