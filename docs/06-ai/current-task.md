@@ -1,48 +1,49 @@
-# Current Task (2026-07-10)
+# Current Task (2026-07-12)
 
 ## Objective
 
-Implement the delayed Sprint 1 scope with production-style structure:
-
-- Authentication
-- JWT
-- User Management (initial profile and password flows)
+Start Sprint 3 by implementing the project access foundation and Project CRUD module on top of the completed authentication and user baseline.
 
 ## In Scope
 
-- Security foundation upgrade from HTTP Basic to JWT authentication.
-- Auth APIs:
-	- Register
-	- Login
-	- Refresh token
-- Core user APIs:
-	- Get profile
-	- Update profile (safe fields)
-	- Change password
+- Project membership foundation:
+	- `Project` entity
+	- `ProjectMember` entity
+	- membership role model (`OWNER`, `ADMIN`, `MEMBER`)
+- Project APIs:
+	- Create project
+	- Get project detail
+	- List accessible projects
+	- Update project
+	- Delete project
+- Authorization rules:
+	- only authenticated users can access project APIs
+	- only members can view project data
+	- only owners can delete projects
 - Persistence baseline:
-	- User entity
-	- User repository
-	- Auth/User DTOs
-	- Mapper layer
-	- Flyway migration `V1__init_user_and_auth_tables.sql`
-- Error handling:
-	- Domain-specific exceptions and handler mapping
+	- project and membership repositories
+	- project DTOs and mapper layer
+	- Flyway migration for `projects` and `project_members`
 - Validation:
-	- Request validation for auth/user payloads
+	- request validation for project payloads
+	- membership and ownership business validation
+- Testing:
+	- unit tests for project service rules
+	- API-level tests for project endpoints
 
 ## Non-Goals (Current Iteration)
 
-- Project CRUD
 - Task CRUD
 - Comment/attachment
 - Notification
+- Admin features
 
 ## Acceptance Checklist
 
-- Auth endpoints return consistent `ApiResponse` payloads.
-- Passwords are hashed (BCrypt).
-- JWT access/refresh token flow works with expiration controls.
-- Protected endpoints require valid JWT.
-- Flyway migration applies cleanly on local/dev profiles.
-- Unit tests for service logic and integration tests for auth APIs pass.
-- Swagger/OpenAPI displays the new endpoints and auth scheme.
+- Project endpoints return consistent `ApiResponse` payloads.
+- Authenticated users can create projects and become initial owners.
+- Accessible project list returns only projects the current user belongs to.
+- Non-members cannot access unrelated projects.
+- Only owners can delete projects.
+- Flyway migration for project tables applies cleanly on local/dev profiles.
+- Unit tests for project service logic and API tests for project endpoints pass.
