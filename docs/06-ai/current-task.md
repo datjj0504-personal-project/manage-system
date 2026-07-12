@@ -2,48 +2,50 @@
 
 ## Objective
 
-Start Sprint 3 by implementing the project access foundation and Project CRUD module on top of the completed authentication and user baseline.
+Continue Sprint 3 by implementing Task CRUD inside Project boundaries, on top of completed auth/user/project foundations.
 
 ## In Scope
 
-- Project membership foundation:
-	- `Project` entity
-	- `ProjectMember` entity
-	- membership role model (`OWNER`, `ADMIN`, `MEMBER`)
-- Project APIs:
-	- Create project
-	- Get project detail
-	- List accessible projects
-	- Update project
-	- Delete project
+- Task persistence and domain model:
+	- `Task` entity
+	- status model (`TODO`, `IN_PROGRESS`, `DONE`)
+	- priority model (`LOW`, `MEDIUM`, `HIGH`)
+- Task APIs:
+	- Create task
+	- Get task detail
+	- List tasks in project
+	- Update task
+	- Delete task
 - Authorization rules:
-	- only authenticated users can access project APIs
-	- only members can view project data
-	- only owners can delete projects
+	- only authenticated users can access task APIs
+	- only project members can access project tasks
+	- assignment must stay within project membership
+- Validation and business rules:
+	- request validation for task payloads
+	- due date and assignment validation
+	- completed task modification rule (must reopen first)
 - Persistence baseline:
-	- project and membership repositories
-	- project DTOs and mapper layer
-	- Flyway migration for `projects` and `project_members`
-- Validation:
-	- request validation for project payloads
-	- membership and ownership business validation
+	- task repository
+	- task DTOs and mapper layer
+	- Flyway migration for `tasks`
 - Testing:
-	- unit tests for project service rules
-	- API-level tests for project endpoints
+	- unit tests for task service rules
+	- API-level tests for task endpoints
 
 ## Non-Goals (Current Iteration)
 
-- Task CRUD
 - Comment/attachment
 - Notification
 - Admin features
+- Full collaboration module
 
 ## Acceptance Checklist
 
-- Project endpoints return consistent `ApiResponse` payloads.
-- Authenticated users can create projects and become initial owners.
-- Accessible project list returns only projects the current user belongs to.
-- Non-members cannot access unrelated projects.
-- Only owners can delete projects.
-- Flyway migration for project tables applies cleanly on local/dev profiles.
-- Unit tests for project service logic and API tests for project endpoints pass.
+- Task endpoints return consistent `ApiResponse` payloads.
+- Members can create/list/view tasks only in accessible projects.
+- Non-members cannot access tasks in unrelated projects.
+- Task assignee must be a member of the same project.
+- Task list supports documented pagination/sorting/filtering.
+- Completed task update rule is enforced.
+- Flyway migration for task table applies cleanly on local/dev profiles.
+- Unit tests for task service logic and API tests for task endpoints pass.
