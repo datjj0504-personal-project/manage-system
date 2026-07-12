@@ -1,48 +1,51 @@
-# Current Task (2026-07-10)
+# Current Task (2026-07-12)
 
 ## Objective
 
-Implement the delayed Sprint 1 scope with production-style structure:
-
-- Authentication
-- JWT
-- User Management (initial profile and password flows)
+Continue Sprint 3 by implementing Task CRUD inside Project boundaries, on top of completed auth/user/project foundations.
 
 ## In Scope
 
-- Security foundation upgrade from HTTP Basic to JWT authentication.
-- Auth APIs:
-	- Register
-	- Login
-	- Refresh token
-- Core user APIs:
-	- Get profile
-	- Update profile (safe fields)
-	- Change password
+- Task persistence and domain model:
+	- `Task` entity
+	- status model (`TODO`, `IN_PROGRESS`, `DONE`)
+	- priority model (`LOW`, `MEDIUM`, `HIGH`)
+- Task APIs:
+	- Create task
+	- Get task detail
+	- List tasks in project
+	- Update task
+	- Delete task
+- Authorization rules:
+	- only authenticated users can access task APIs
+	- only project members can access project tasks
+	- assignment must stay within project membership
+- Validation and business rules:
+	- request validation for task payloads
+	- due date and assignment validation
+	- completed task modification rule (must reopen first)
 - Persistence baseline:
-	- User entity
-	- User repository
-	- Auth/User DTOs
-	- Mapper layer
-	- Flyway migration `V1__init_user_and_auth_tables.sql`
-- Error handling:
-	- Domain-specific exceptions and handler mapping
-- Validation:
-	- Request validation for auth/user payloads
+	- task repository
+	- task DTOs and mapper layer
+	- Flyway migration for `tasks`
+- Testing:
+	- unit tests for task service rules
+	- API-level tests for task endpoints
 
 ## Non-Goals (Current Iteration)
 
-- Project CRUD
-- Task CRUD
 - Comment/attachment
 - Notification
+- Admin features
+- Full collaboration module
 
 ## Acceptance Checklist
 
-- Auth endpoints return consistent `ApiResponse` payloads.
-- Passwords are hashed (BCrypt).
-- JWT access/refresh token flow works with expiration controls.
-- Protected endpoints require valid JWT.
-- Flyway migration applies cleanly on local/dev profiles.
-- Unit tests for service logic and integration tests for auth APIs pass.
-- Swagger/OpenAPI displays the new endpoints and auth scheme.
+- Task endpoints return consistent `ApiResponse` payloads.
+- Members can create/list/view tasks only in accessible projects.
+- Non-members cannot access tasks in unrelated projects.
+- Task assignee must be a member of the same project.
+- Task list supports documented pagination/sorting/filtering.
+- Completed task update rule is enforced.
+- Flyway migration for task table applies cleanly on local/dev profiles.
+- Unit tests for task service logic and API tests for task endpoints pass.

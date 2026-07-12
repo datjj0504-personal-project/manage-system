@@ -33,6 +33,12 @@ public ResponseEntity<ApiResponse<Void>> handleConstraintViolation(ConstraintVio
 			.body(ApiResponse.failure("Validation failed"));
 }
 
+@ExceptionHandler(IllegalArgumentException.class)
+public ResponseEntity<ApiResponse<Void>> handleIllegalArgument(IllegalArgumentException exception) {
+	return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+			.body(ApiResponse.failure(exception.getMessage()));
+}
+
 @ExceptionHandler(ResourceNotFoundException.class)
 public ResponseEntity<ApiResponse<Void>> handleResourceNotFound(ResourceNotFoundException exception) {
 	return ResponseEntity.status(HttpStatus.NOT_FOUND)

@@ -1,35 +1,36 @@
 # Next Tasks
 
-## Phase 1: Complete Foundation Gap
+## Phase 1: Task Module Core
 
-1. Finish authentication and user management module.
-2. Add role model (Owner/Admin/Member) groundwork for project membership.
-3. Strengthen exception taxonomy and API error contracts.
-4. Add baseline test suite structure (unit + integration).
+1. Implement `Task` entity, enums, repository, DTOs, mapper, service, and controller.
+2. Add Flyway migration for `tasks` with constraints and indexes.
+3. Implement task CRUD under `/api/v1/projects/{projectId}/tasks`.
+4. Enforce project membership authorization for all task APIs.
+5. Enforce assignee membership validation within the same project.
 
-## Phase 2: Sprint 2 Catch-up
+## Phase 2: Task Query and Rule Hardening
 
-1. Implement Project CRUD with ownership and member authorization checks.
-2. Implement Task CRUD with project-bound access control.
-3. Add pagination, sorting, and filtering for project/task listing endpoints.
-4. Add mapping and validation coverage for all request/response DTOs.
+1. Add pagination, sorting, and filtering for task list endpoint.
+2. Enforce completed-task update rule and reopen behavior.
+3. Add task unit tests and API-level tests for success/failure paths.
+4. Add repository-level tests for task query behavior.
 
-## Phase 3: Sprint 3 Targets
+## Phase 3: Documentation and Progress Sync
+
+1. Update `docs/03-api/task/*` to match implemented contracts.
+2. Update `docs/04-database/tables/task.md` and migration notes.
+3. Update `docs/07-project-management` to reflect Sprint 3 project completion state.
+
+## Phase 4: Collaboration and Documentation Sync
 
 1. Implement comments on tasks with membership checks.
 2. Implement attachment upload metadata flow.
-3. Evaluate notification architecture (event-driven candidate).
-
-## Phase 4: Sprint 4 Hardening
-
-1. Expand test coverage with MockMvc and repository/service tests.
-2. Refactor for package cohesion and reduced duplication.
 3. Finalize Docker runbook and compose validation.
-4. Align all docs (`03-api`, `04-database`, `07-progress`) with implemented features.
+4. Align docs folders with collaboration features after implementation.
 
 ## Cross-Cutting Rules
 
 - Keep strict layered architecture.
 - Do not expose entities directly in controllers.
 - Keep all schema changes in Flyway migrations.
-- Update sprint report immediately after finishing each milestone.
+- Keep AI status files honest and synchronized with verified source code.
