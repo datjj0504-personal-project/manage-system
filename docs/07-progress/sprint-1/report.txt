@@ -1,9 +1,0 @@
-Report for sprint 1:
-
-- Finish: Server initialization
-
-- Not yet: 
-    - Authentication
-    - JWT
-    - User Management
---> Need to implement in sprint 2

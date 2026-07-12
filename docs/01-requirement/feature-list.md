@@ -1,33 +1,48 @@
-Authentication
+# Feature List
+
+## Authentication
 
 - Register
 - Login
 - Refresh Token
 
-User
+## User
 
-- Profile
-- Avatar
-- Change Password
+- View own profile
+- Update own profile
+- Upload or update avatar URL
+- Change password
 
-Project
+## Project
 
-- CRUD
+- Create project
+- Get project detail
+- Update project
+- Delete project (Owner only)
+- List accessible projects
 
-Task
+## Task
 
-- CRUD
+- Create task in project
+- Get task detail
+- Update task
+- Delete task
+- List tasks in project
+- Assign task to Assignee
+- Update Status and Priority
 
-Comment
+## Collaboration
 
-Attachment
+- Comment on task (planned)
+- Attachment on task (planned)
 
-Search
+## Query Capabilities
 
-Pagination
+- Search by keyword
+- Pagination
+- Sorting
+- Filtering
 
-Sorting
+## Administration
 
-Filtering
-
-Admin
+- Admin capabilities are planned after core User, Project, and Task modules are stable.

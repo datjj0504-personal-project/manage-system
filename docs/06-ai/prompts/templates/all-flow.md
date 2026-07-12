@@ -1,0 +1,1 @@
+Read docs/08-ai/system-prompt.md, then execute docs/08-ai/prompts/03-implement-feature.md using the task described in current-task.md
